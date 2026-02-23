@@ -96,34 +96,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
         projectsGrid.appendChild(card);
     });
-
-    const portfolioQrContainer = document.getElementById('portfolio-qrcode');
-    const downloadPortfolioQrBtn = document.getElementById('download-portfolio-qr');
-
-    if (portfolioQrContainer) {
-        // Generate QR for the live Vercel link
-        const liveUrl = "https://scannermy.vercel.app/";
-        
-        new QRCode(portfolioQrContainer, {
-            text: liveUrl,
-            width: 200,
-            height: 200,
-            colorDark: "#000000",
-            colorLight: "#ffffff",
-            correctLevel: QRCode.CorrectLevel.H
-        });
-
-        // Download Logic
-        if (downloadPortfolioQrBtn) {
-            downloadPortfolioQrBtn.onclick = () => {
-                const img = portfolioQrContainer.querySelector('img');
-                if (img) {
-                    const link = document.createElement('a');
-                    link.href = img.src;
-                    link.download = "Scanner_Portfolio_QR.png";
-                    link.click();
-                }
-            };
-        }
-    }
 });
