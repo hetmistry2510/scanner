@@ -54,6 +54,14 @@ const projects = [
         desc: "Advanced 3D visualization project developed during internship to showcase interactive 3D models.",
         repo: null,
         live: "https://prod-3-d.vercel.app/"
+    },
+    {
+        id: 8,
+        title: "Hotel System",
+        tag: "Hospitality",
+        desc: "A comprehensive Hotel Management and Ordering System featuring an automated admin dashboard and real-time menu management.",
+        repo: "https://github.com/hetmistry2510/Hotel.git",
+        live: null
     }
 ];
 
